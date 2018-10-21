@@ -30,7 +30,7 @@ end
     erb :'/owners/show'
   end
 
-  patch '/owners/:id' do
+  post '/owners/:id' do
     @owner = Owner.find(params[:id])
 
     if !params[:owner].keys.include?("pet_ids")
